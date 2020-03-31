@@ -11,7 +11,7 @@ def send_welcome(message):
 
 @bot.message_handler(content_types=['text'])
 def msg(message):
-    if (message.text == "Привет"):
+    if (message.text == "Привет" or message.text == "привет"):
         bot.send_photo(message.chat.id, open('1.jpg', 'rb'))
 
 bot.polling()
